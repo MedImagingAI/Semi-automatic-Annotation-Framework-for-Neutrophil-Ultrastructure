@@ -1,12 +1,16 @@
 import os
+import sys
 import json
 import cv2
 import torch
 import argparse
 import pandas as pd
 from pathlib import Path
-from yolov9_core.models.experimental import attempt_load
-from yolov9_core.utils.general import non_max_suppression
+#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'yolov9_core')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'yolov9_core', 'yolov9')))
+
+from models.experimental import attempt_load
+from utils.general import non_max_suppression
 
 # Class labels
 CLASS_NAMES = {
@@ -98,7 +102,7 @@ def convert_to_cvat_ellipse(json_path, output_xml_path):
 
 def run_pipeline(image_dir, weights_path, coco_json_out, cvat_xml_out, img_size=1280):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = attempt_load(weights_path, map_location=device)
+    model = attempt_load(weights_path)
     model.to(device).eval()
 
     images_data, annotations_data, results_table = [], [], []
