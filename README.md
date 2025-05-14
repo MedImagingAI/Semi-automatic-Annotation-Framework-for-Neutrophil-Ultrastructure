@@ -67,8 +67,9 @@ cd Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure
 
 ### 2. Install Dependencies
 We recommend using a virtual environment.
-
+```bash
 pip install -r requirements.txt
+```
 
 ## Usage
 ### A. Run the Full Pipeline (Detection → Ellipse Conversion)
@@ -79,6 +80,7 @@ python pipeline/full_pipeline.py \
   --weights pipeline/weights/best.pt \
   --json inferenceResults/neutrophils_yolo_predictions.json \
   --xml inferenceResults/neutrophils_yolo_predictions.xml
+```
 
 ### B. Run Inference Only
 
@@ -88,6 +90,7 @@ python pipeline/inference.py \
   --weights pipeline/weights/best.pt \
   --json inferenceResults/neutrophils_yolo_predictions.json \
   --excel inferenceResults/neutrophils_summary.xlsx
+```
 
 ### C. Convert YOLO Predictions to CVAT-Compatible Ellipses
 
@@ -95,6 +98,7 @@ python pipeline/inference.py \
 python pipeline/convert_to_cvat_ellipse.py \
   --json inferenceResults/neutrophils_yolo_predictions.json \
   --output inferenceResults/neutrophils_yolo_predictions.xml
+```
 
 ## CVAT Annotation Interface Preview
 Below is a screenshot showing how ellipse annotations appear after importing into CVAT:
@@ -110,10 +114,6 @@ Below is a screenshot showing how ellipse annotations appear after importing int
 
 4. Start refining ellipse annotations directly in the CVAT web interface.
 
-### Requirements
-
-```bash
-pip install -r requirements.txt
 
 ## License
 This project is licensed under the MIT License.
