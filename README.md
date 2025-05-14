@@ -63,6 +63,7 @@ Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure/
 ```bash
 git clone https://github.com/MedImagingAI/Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure.git
 cd Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure
+```
 
 ### 2. Install Dependencies
 We recommend using a virtual environment.
