@@ -1,12 +1,16 @@
 import os
+import sys
 import cv2
 import json
 import torch
 import argparse
 import pandas as pd
 from pathlib import Path
-from yolov9_core.models.experimental import attempt_load
-from yolov9_core.utils.general import non_max_suppression
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'yolov9_core', 'yolov9')))
+
+from models.experimental import attempt_load
+from utils.general import non_max_suppression
 
 # Class mapping
 CLASS_NAMES = {
@@ -58,7 +62,7 @@ def save_coco_format(images, annotations, output_path):
 def process_folder(image_dir, weights_path, output_json, output_excel, img_size=1280):
     """Run inference over all images in a directory."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = attempt_load(weights_path, map_location=device)
+    model = attempt_load(weights_path)
     model.to(device).eval()
 
     images_data, annotations, summary = [], [], []
