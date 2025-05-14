@@ -17,7 +17,6 @@ TEM images of neutrophils contain dense and complex ultrastructures such as gran
 ---
 
 ## 📁 Repository Structure
-<details> <summary><strong>📁 Repository Structure (click to expand)</strong></summary>
   
 Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure/
 │
@@ -50,7 +49,6 @@ Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure/
 │   └── convert_to_cvat_ellipse.py # Convert COCO JSON → CVAT XML with ellipses
 │
 └── requirements.txt              # List of Python dependencies
-<details>
 
 ## ✅ Features
 
