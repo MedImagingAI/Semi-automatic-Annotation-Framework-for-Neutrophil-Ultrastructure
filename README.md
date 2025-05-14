@@ -22,8 +22,8 @@ Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure/
 │
 ├── README.md                      # Main documentation with instructions
 ├── figures/                       # CVAT annotation screenshots for refinement illustration
-│   ├── cvat_refinement_1.png
-│   └── cvat_refinement_2.png
+│   ├── *.png
+│   └── --
 │
 ├── sample_images/                # Folder containing test images
 │   └── *.jpg
