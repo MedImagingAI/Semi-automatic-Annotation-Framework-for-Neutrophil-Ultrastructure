@@ -1,6 +1,4 @@
-# Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure
-
-A Semi-automatic Annotation Framework for Neutrophil and Other Immune Cells Ultrastructure from TEM Images
+# A Semi-automatic Annotation Framework for Neutrophil and Other Immune Cells Ultrastructure from TEM Images
 
 This repository provides a complete pipeline to accelerate and streamline the annotation of ultrastructural components in Transmission Electron Microscopy (TEM) images, particularly focusing on neutrophils. It uses a YOLOv9-based object detector, formats output in both COCO and CVAT-compatible ellipse annotations, and is designed to reduce the manual annotation burden in biomedical imaging workflows.
 
