@@ -103,7 +103,7 @@ python pipeline/convert_to_cvat_ellipse.py \
 ## CVAT Annotation Interface Preview
 Below is a screenshot showing how ellipse annotations appear after importing into CVAT:
 
-<p align="center"> <img src="figures/cvat_preview.png" alt="CVAT Interface" width="700"/> </p>
+<p align="center"> <img src="figures/framework_demonstration_cvat.png" alt="CVAT Interface" width="700"/> </p>
 
 ## How to Use with CVAT
 1. Create a new task in CVAT.
