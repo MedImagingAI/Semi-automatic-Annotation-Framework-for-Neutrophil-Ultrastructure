@@ -20,27 +20,36 @@ TEM images of neutrophils contain dense and complex ultrastructures such as gran
 
 Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure/
 │
+├── README.md                      # Main documentation with instructions
+├── figures/                       # CVAT annotation screenshots for refinement illustration
+│   ├── cvat_refinement_1.png
+│   └── cvat_refinement_2.png
+│
+├── sample_images/                # Folder containing test images
+│   └── *.jpg
+│
+├── inferenceResults/             # Output directory for inference results
+│   ├── neutrophils_yolo_predictions.json
+│   ├── neutrophils_yolo_predictions.xml
+│   └── neutrophils_yolo_predictions.xlsx
+│
 ├── pipeline/
-│ ├── weights/ # Trained YOLOv9 model
-│ │ └── best.pt
-│ ├── yolov9_core/ # YOLOv9 source files
-│ │ └── yolov9/
-│ ├── full_pipeline.py # Full pipeline: detection → ellipse conversion
-│ ├── inference.py # Inference only: output COCO + Excel
-│ └── convert_to_cvat_ellipse.py # Convert COCO JSON to CVAT-compatible XML
+│   ├── weights/
+│   │   └── best.pt               # Trained YOLOv9 model
+│   │
+│   ├── yolov9_core/
+│   │   └── yolov9/               # YOLOv9 core files (models, utils, etc.)
+│   │       ├── models/
+│   │       ├── utils/
+│   │       ├── detect.py
+│   │       └── ...
+│   │
+│   ├── full_pipeline.py          # Inference + JSON export + CVAT ellipse conversion
+│   ├── inference.py              # Only inference (JSON + Excel)
+│   └── convert_to_cvat_ellipse.py # Convert COCO JSON → CVAT XML with ellipses
 │
-├── sample_images/ # Example input TEM images
-│ └── *.jpg
-│
-├── inferenceResults/ # Output results (JSON, XML, Excel)
-│
-├── figures/ # CVAT interface screenshots
-│ └── cvat_preview.png
-│
-├── requirements.txt # Python dependencies
-└── README.md # This file
+└── requirements.txt              # List of Python dependencies
 
----
 
 ## ✅ Features
 
