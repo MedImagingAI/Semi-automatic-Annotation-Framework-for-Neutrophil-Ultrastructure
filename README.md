@@ -52,8 +52,8 @@ Semi-automatic-Annotation-Framework-for-Neutrophil-Ultrastructure/
 ## ✅ Features
 
 - Detects 4 key ultrastructures:
-  - Primary granules
-  - Secondary granules
+  - Dark granules
+  - Light granules
   - Empty vesicles
   - Emptying vesicles
 - Converts YOLOv9 bounding boxes into CVAT-supported ellipses
