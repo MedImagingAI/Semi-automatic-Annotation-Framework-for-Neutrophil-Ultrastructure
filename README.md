@@ -92,18 +92,18 @@ python pipeline/full_pipeline.py
 ### B. Run Inference Only
 
 ```bash
-python pipeline/inference.py \
-  --images sample_images \
-  --weights pipeline/weights/best.pt \
-  --json inferenceResults/neutrophils_yolo_predictions.json \
+python pipeline/inference.py
+  --images sample_images
+  --weights pipeline/weights/best.pt
+  --json inferenceResults/neutrophils_yolo_predictions.json
   --excel inferenceResults/neutrophils_summary.xlsx
 ```
 
 ### C. Convert YOLO Predictions to CVAT-Compatible Ellipses
 
 ```bash
-python pipeline/convert_to_cvat_ellipse.py \
-  --json inferenceResults/neutrophils_yolo_predictions.json \
+python pipeline/convert_to_cvat_ellipse.py
+  --json inferenceResults/neutrophils_yolo_predictions.json
   --output inferenceResults/neutrophils_yolo_predictions.xml
 ```
 
