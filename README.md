@@ -82,10 +82,10 @@ pip install -r requirements.txt
 ### A. Run the Full Pipeline (Detection → Ellipse Conversion)
 
 ```bash
-python pipeline/full_pipeline.py \
-  --images sample_images \
-  --weights pipeline/weights/best.pt \
-  --json inferenceResults/neutrophils_yolo_predictions.json \
+python pipeline/full_pipeline.py 
+  --images sample_images 
+  --weights pipeline/weights/best.pt 
+  --json inferenceResults/neutrophils_yolo_predictions.json 
   --xml inferenceResults/neutrophils_yolo_predictions.xml
 ```
 
