@@ -124,3 +124,6 @@ Below is a screenshot showing how ellipse annotations appear after importing int
 
 ## License
 This project is licensed under the MIT License.
+
+## Contact
+For any questions or feedback, contact: medimagingai@gmail.com
